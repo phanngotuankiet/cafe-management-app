@@ -1,0 +1,70 @@
+Tính năng chính:
+- Quản lý menu & đặt món realtime
+- Quản lý bàn và đặt bàn
+- Quản lý nhân viên & ca làm việc
+- Thống kê doanh thu
+- Quản lý kho & nguyên liệu
+- Loyalty program & membership
+
+Tech focus:
+- Realtime updates với GraphQL subscriptions
+- Caching với Redis
+- Payment integration
+- QR code generation
+
+Tech stack:
+    Frontend:
+    - Vue 3 + TypeScript
+    - Vite
+    - TailwindCSS
+    - Apollo Client
+    - Pinia
+
+    Backend:
+    - Node.js + Express
+    - TypeScript
+    - Apollo Server
+    - JWT Auth
+
+    Database:
+    - PostgreSQL
+    - Hasura
+    - Redis
+
+    DevOps:
+    - Docker
+    - Digital Ocean
+    - GitHub Actions
+    - Nginx
+
+System architecture:
+├── Client Side (Vue 3)
+│   ├── Customer Portal (đặt món, xem menu)
+│   ├── Staff Portal (quản lý order, bàn)
+│   └── Admin Portal (quản lý toàn bộ hệ thống)
+│
+├── Server Side (Node.js)
+│   ├── Authentication Service
+│   ├── Order Service
+│   ├── Inventory Service
+│   └── Analytics Service
+│
+├── Database (PostgreSQL + Hasura)
+│   ├── Core Schema (users, products, orders)
+│   ├── Inventory Schema (ingredients, suppliers)
+│   └── Analytics Schema (reports, metrics)
+│
+└── External Services
+    ├── Payment Gateway (VNPay/Momo)
+    ├── SMS/Email Service
+    └── Cloud Storage (S3)
+
+Cấu trúc project:
+cafe-management/
+├── frontend/          # Vue.js app
+├── backend/           # Node.js app
+├── hasura/            # Hasura migrations & metadata
+├── nginx/            # Nginx config
+└── docker/           # Docker configs
+    ├── development/
+    └── production/
